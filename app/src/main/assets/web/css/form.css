@@ -1,0 +1,91 @@
+/* Add/Edit Food Form Styles */
+.form-container {
+  padding: 16px 20px 40px 20px;
+}
+
+.photo-upload-box {
+  width: 100%;
+  height: 120px;
+  background: var(--light-blue-soft);
+  border: 1.5px dashed var(--secondary-color);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--primary-color);
+  cursor: pointer;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-upload-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-upload-box .upload-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.radio-pills-group {
+  display: flex;
+  gap: 12px;
+}
+
+.radio-pill {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: var(--white);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.radio-pill input {
+  display: none;
+}
+
+.radio-pill.selected {
+  border-color: var(--primary-color);
+  background: var(--light-blue-soft);
+  color: var(--primary-color);
+}
+
+.radio-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-pill.selected .radio-dot {
+  border-color: var(--primary-color);
+}
+
+.radio-pill.selected .radio-dot::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-color);
+}

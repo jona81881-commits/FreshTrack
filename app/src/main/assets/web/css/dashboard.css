@@ -1,0 +1,203 @@
+/* Dashboard (Beranda) Styles */
+.dashboard-header {
+  background: linear-gradient(135deg, #1A4D9A 0%, #2C5EAD 100%);
+  color: var(--white);
+  padding: 20px 20px 22px 20px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  position: relative;
+}
+
+.dashboard-user-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.greeting-text {
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sub-greeting {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 2px;
+}
+
+.bell-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.bell-btn:active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.bell-dot {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--status-red);
+  border-radius: 50%;
+  border: 1.5px solid var(--white);
+}
+
+.dashboard-content {
+  padding: 16px 20px;
+  margin-top: 0;
+}
+
+/* 4 Metric Cards Grid */
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.metric-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.metric-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.metric-icon-box.blue {
+  background: #E8F1FC;
+  color: var(--primary-color);
+}
+.metric-icon-box.green {
+  background: #E8F6F0;
+  color: var(--status-green);
+}
+.metric-icon-box.cyan {
+  background: #E6F7FF;
+  color: #0091FF;
+}
+.metric-icon-box.red {
+  background: var(--status-red-bg);
+  color: var(--status-red);
+}
+
+.metric-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-number {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.metric-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.section-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+/* Priority Section & Cards */
+.priority-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+/* Next Reminder Banner */
+.reminder-banner {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.reminder-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reminder-clock-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--light-blue-soft);
+  color: var(--primary-color);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reminder-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.reminder-subtitle {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.dashboard-btn-wrapper {
+  margin-bottom: 20px;
+}

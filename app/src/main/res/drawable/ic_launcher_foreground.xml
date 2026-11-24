@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- House outline & roof -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,26 L24,50 L32,50 L32,80 L76,80 L76,50 L84,50 Z M54,34 L70,47 L70,74 L38,74 L38,47 Z" />
+    <!-- Door / Center opening -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,58 L60,58 L60,74 L48,74 Z" />
+    <!-- Leaf on top right -->
+    <path
+        android:fillColor="#20A36B"
+        android:pathData="M72,24 C72,24 84,24 86,36 C86,44 76,46 72,46 C72,46 72,34 72,24 Z" />
+</vector>

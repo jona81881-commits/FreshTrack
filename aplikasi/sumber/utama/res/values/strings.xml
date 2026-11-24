@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FreshTrack</string>
+    <string name="channel_name">Pengingat Kedaluwarsa Makanan</string>
+    <string name="channel_description">Notifikasi pengingat sebelum makanan kedaluwarsa</string>
+</resources>

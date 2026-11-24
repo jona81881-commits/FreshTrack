@@ -1,0 +1,87 @@
+<!-- FreshTrack: Halaman Beranda (Dashboard) -->
+<div class="dashboard-header">
+  <div class="dashboard-user-bar">
+    <div>
+      <div class="greeting-text">
+        <span>Halo, Budi!</span>
+        <span>👋</span>
+      </div>
+      <div class="sub-greeting">Selamat pagi</div>
+      <div class="sub-greeting" id="dashboard-date-str">Sen, 18 November 2024</div>
+    </div>
+    <div class="bell-btn" onclick="Navigation.navigate('alarm')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+      </svg>
+      <span class="bell-dot"></span>
+    </div>
+  </div>
+</div>
+
+<div class="dashboard-content">
+  <!-- 4 Metric Cards -->
+  <div class="summary-grid">
+    <div class="metric-card" onclick="Navigation.navigate('inventaris')">
+      <div class="metric-icon-box blue">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      </div>
+      <div class="metric-info">
+        <span class="metric-number" id="metric-total">18</span>
+        <span class="metric-label">Total Makanan</span>
+      </div>
+    </div>
+
+    <div class="metric-card" onclick="Navigation.navigate('inventaris')">
+      <div class="metric-icon-box green">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/></svg>
+      </div>
+      <div class="metric-info">
+        <span class="metric-number" id="metric-unopened">5</span>
+        <span class="metric-label">Belum Dibuka</span>
+      </div>
+    </div>
+
+    <div class="metric-card" onclick="Navigation.navigate('inventaris')">
+      <div class="metric-icon-box cyan">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+      </div>
+      <div class="metric-info">
+        <span class="metric-number" id="metric-opened">7</span>
+        <span class="metric-label">Sudah Dibuka</span>
+      </div>
+    </div>
+
+    <div class="metric-card" onclick="Navigation.navigate('inventaris')">
+      <div class="metric-icon-box red">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <div class="metric-info">
+        <span class="metric-number" id="metric-urgent">3</span>
+        <span class="metric-label">Perlu Segera Digunakan</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prioritas Konsumsi Section -->
+  <div class="section-header">
+    <span class="section-title">Prioritas Konsumsi</span>
+    <span class="section-link" onclick="Navigation.navigate('inventaris')">Lihat Semua &gt;</span>
+  </div>
+  <div class="priority-list" id="dashboard-priority-list"></div>
+
+  <!-- Pengingat Berikutnya Section -->
+  <div class="section-header">
+    <span class="section-title">Pengingat Berikutnya</span>
+    <span class="section-link" onclick="Navigation.navigate('alarm')">Lihat Semua &gt;</span>
+  </div>
+  <div id="dashboard-next-reminder"></div>
+
+  <!-- Action Button -->
+  <div class="dashboard-btn-wrapper">
+    <button class="btn btn-primary btn-block btn-pill" onclick="Navigation.navigate('tambah-makanan')" style="padding: 14px; gap: 8px;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      <span>+ Tambah Makanan</span>
+    </button>
+  </div>
+</div>

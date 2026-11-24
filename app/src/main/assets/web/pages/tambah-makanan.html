@@ -1,0 +1,127 @@
+<!-- FreshTrack: Halaman Tambah & Ubah Makanan -->
+<div class="header-bar">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div class="header-action-btn" onclick="Navigation.back()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="m15 18-6-6 6-6"/></svg>
+    </div>
+    <span class="header-title" id="form-header-title">Tambah Makanan</span>
+  </div>
+  <div class="header-action-btn" onclick="Database.showToast('Pemindai barcode siap dihubungkan')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M3 5v4M3 5h4M21 5v4M21 5h-4M3 19v-4M3 19h4M21 19v-4M21 19h-4"/><line x1="7" y1="9" x2="7" y2="15"/><line x1="11" y1="9" x2="11" y2="15"/><line x1="15" y1="9" x2="15" y2="15"/></svg>
+  </div>
+</div>
+
+<div class="form-container">
+  <!-- Photo Upload Box -->
+  <div class="photo-upload-box" id="photo-upload-preview" onclick="Database.pickImage()">
+    <div class="upload-prompt">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28">
+        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+        <circle cx="12" cy="13" r="4"/>
+      </svg>
+      <span>Tambah Foto</span>
+    </div>
+  </div>
+
+  <!-- Nama Makanan -->
+  <div class="form-group">
+    <label class="form-label">Nama Makanan *</label>
+    <input type="text" class="form-input" id="input-name" placeholder="Contoh: Susu UHT">
+  </div>
+
+  <!-- Kategori -->
+  <div class="form-group">
+    <label class="form-label">Kategori *</label>
+    <select class="form-select" id="input-category">
+      <option value="Susu">Susu</option>
+      <option value="Buah">Buah</option>
+      <option value="Sayuran">Sayuran</option>
+      <option value="Daging">Daging</option>
+      <option value="Ikan">Ikan</option>
+      <option value="Minuman">Minuman</option>
+      <option value="Makanan Siap Saji">Makanan Siap Saji</option>
+      <option value="Makanan Kering">Makanan Kering</option>
+      <option value="Bumbu">Bumbu</option>
+      <option value="Lainnya">Lainnya</option>
+    </select>
+  </div>
+
+  <!-- Jumlah dan Satuan -->
+  <div class="form-row">
+    <div class="form-group">
+      <label class="form-label">Jumlah *</label>
+      <input type="number" class="form-input" id="input-quantity" value="1" min="0.1" step="any">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Satuan *</label>
+      <select class="form-select" id="input-unit">
+        <option value="Kotak">Kotak</option>
+        <option value="Buah">Buah</option>
+        <option value="Gram">Gram</option>
+        <option value="Kilogram">Kilogram</option>
+        <option value="Mililiter">Mililiter</option>
+        <option value="Liter">Liter</option>
+        <option value="Bungkus">Bungkus</option>
+        <option value="Botol">Botol</option>
+        <option value="Kaleng">Kaleng</option>
+        <option value="Porsi">Porsi</option>
+        <option value="Butir">Butir</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Tanggal Pembelian & Tanggal Kedaluwarsa -->
+  <div class="form-row">
+    <div class="form-group">
+      <label class="form-label">Tanggal Pembelian *</label>
+      <input type="date" class="form-input" id="input-purchase-date">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Tanggal Kedaluwarsa *</label>
+      <input type="date" class="form-input" id="input-expiry-date">
+    </div>
+  </div>
+
+  <!-- Lokasi Penyimpanan -->
+  <div class="form-group">
+    <label class="form-label">Lokasi Penyimpanan *</label>
+    <select class="form-select" id="input-location">
+      <option value="Kulkas">Kulkas</option>
+      <option value="Freezer">Freezer</option>
+      <option value="Suhu Ruang">Suhu Ruang</option>
+      <option value="Lemari Penyimpanan">Lemari Penyimpanan</option>
+    </select>
+  </div>
+
+  <!-- Status Kemasan -->
+  <div class="form-group">
+    <label class="form-label">Status Kemasan</label>
+    <div class="radio-pills-group">
+      <label class="radio-pill selected">
+        <input type="radio" name="package_status" value="Belum Dibuka" checked>
+        <div class="radio-dot"></div>
+        <span>Belum Dibuka</span>
+      </label>
+      <label class="radio-pill">
+        <input type="radio" name="package_status" value="Sudah Dibuka">
+        <div class="radio-dot"></div>
+        <span>Sudah Dibuka</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Harga (Opsional) -->
+  <div class="form-group">
+    <label class="form-label">Harga Makanan (Opsional)</label>
+    <input type="number" class="form-input" id="input-price" placeholder="Contoh: 18000" min="0">
+  </div>
+
+  <!-- Catatan (Opsional) -->
+  <div class="form-group">
+    <label class="form-label">Catatan (Opsional)</label>
+    <textarea class="form-textarea" id="input-notes" placeholder="Contoh: Simpan di bagian chiller atas"></textarea>
+  </div>
+
+  <!-- Submit Button -->
+  <button class="btn btn-primary btn-block btn-pill" id="form-submit-btn" onclick="FoodFormPage.submitForm()" style="padding: 14px; margin-top: 10px;">Simpan Makanan</button>
+</div>

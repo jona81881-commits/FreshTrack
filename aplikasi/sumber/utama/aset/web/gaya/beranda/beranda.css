@@ -1,0 +1,280 @@
+/* Dashboard (Beranda) Styles - Modern 3D & Minimalist Card UI */
+
+/* Header Card Utama */
+.dashboard-header-card {
+  background: linear-gradient(135deg, #184EA3 0%, #1D63CB 55%, #2578EC 100%);
+  color: var(--white);
+  border-radius: 26px;
+  margin: 12px 14px 16px 14px;
+  padding: 22px 18px 18px 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(24, 78, 163, 0.22);
+}
+
+.header-card-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.header-info-col {
+  flex: 1;
+  min-width: 0;
+  padding-bottom: 4px;
+}
+
+.greeting-text {
+  font-size: 21px;
+  font-weight: 800;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.3px;
+}
+
+.greeting-wave {
+  font-size: 20px;
+  display: inline-block;
+}
+
+.sub-greeting {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 3px;
+  font-weight: 400;
+}
+
+/* Translucent Date Pill Badge */
+.header-date-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 20px;
+  padding: 6px 12px;
+  margin-top: 14px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #FFFFFF;
+  backdrop-filter: blur(6px);
+}
+
+.header-date-pill svg {
+  opacity: 0.95;
+}
+
+/* Notification Bell with Red Dot Badge */
+.bell-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s;
+  color: #FFFFFF;
+}
+
+.bell-btn:active {
+  transform: scale(0.92);
+  background: rgba(255, 255, 255, 0.32);
+}
+
+.bell-dot {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 9px;
+  height: 9px;
+  background-color: #EF4444;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* 3D Illustration Container */
+.header-illustration-col {
+  width: 146px;
+  height: 124px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  margin-right: -8px;
+  margin-bottom: -10px;
+  flex-shrink: 0;
+}
+
+.header-3d-illustration {
+  width: 100%;
+  height: 100%;
+}
+
+/* Dashboard Content Area */
+.dashboard-content {
+  padding: 0 14px 20px 14px;
+}
+
+/* 4 Metric Cards (2x2 Grid) */
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px;
+  margin-bottom: 20px;
+}
+
+.metric-card {
+  border-radius: 18px;
+  padding: 12px 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.metric-card:active {
+  transform: scale(0.98);
+}
+
+.metric-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.metric-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.metric-number {
+  font-size: 21px;
+  font-weight: 800;
+  color: #1E293B;
+  line-height: 1;
+  margin-left: 8px;
+  margin-right: auto;
+}
+
+.metric-chevron {
+  stroke: #94A3B8;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.metric-card:hover .metric-chevron {
+  transform: translateX(2px);
+}
+
+.metric-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #64748B;
+  margin-top: 4px;
+}
+
+/* Metric Colors */
+.metric-card-blue {
+  background: #EDF5FE;
+  border: 1px solid #DCEBFA;
+}
+.metric-card-blue .metric-icon-wrap {
+  color: #2C5EAD;
+}
+
+.metric-card-green {
+  background: #EDF9F1;
+  border: 1px solid #DCF2E4;
+}
+.metric-card-green .metric-icon-wrap {
+  color: #20A36B;
+}
+
+.metric-card-cyan {
+  background: #EFF8FF;
+  border: 1px solid #DFEEFC;
+}
+.metric-card-cyan .metric-icon-wrap {
+  color: #0284C7;
+}
+
+.metric-card-red {
+  background: #FFF1F1;
+  border: 1px solid #FEE2E2;
+}
+.metric-card-red .metric-icon-wrap {
+  color: #E74C3C;
+}
+
+/* Prioritas Konsumsi Section Header */
+.priority-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.priority-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.priority-star-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #48BB78;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 5px rgba(72, 187, 120, 0.35);
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1E293B;
+}
+
+.section-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1591DC;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  transition: opacity 0.2s;
+}
+
+.section-link:hover {
+  opacity: 0.85;
+}
+
+/* Priority List Container */
+.priority-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}

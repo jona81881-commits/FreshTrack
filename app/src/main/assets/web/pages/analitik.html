@@ -1,0 +1,84 @@
+<!-- FreshTrack: Halaman Statistik & Analitik -->
+<div class="header-bar">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div class="header-action-btn" onclick="Navigation.back()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="m15 18-6-6 6-6"/></svg>
+    </div>
+    <span class="header-title">Statistik & Analitik</span>
+  </div>
+</div>
+
+<div class="analytics-container">
+  <!-- Time Filter Segment -->
+  <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+    <button class="btn btn-pill time-filter-btn" data-range="7 Hari" onclick="AnalyticsPage.setTimeRange('7 Hari')" style="flex: 1; padding: 8px 12px; font-size: 12px; background: var(--white); color: var(--text-secondary); border: 1px solid var(--border-color);">7 Hari</button>
+    <button class="btn btn-pill time-filter-btn active" data-range="30 Hari" onclick="AnalyticsPage.setTimeRange('30 Hari')" style="flex: 1; padding: 8px 12px; font-size: 12px; background: var(--primary-color); color: var(--white); border: 1px solid var(--primary-color);">30 Hari</button>
+    <button class="btn btn-pill time-filter-btn" data-range="1 Tahun" onclick="AnalyticsPage.setTimeRange('1 Tahun')" style="flex: 1; padding: 8px 12px; font-size: 12px; background: var(--white); color: var(--text-secondary); border: 1px solid var(--border-color);">1 Tahun</button>
+  </div>
+
+  <!-- Donut Chart Card -->
+  <div class="chart-card">
+    <div class="donut-chart-wrapper">
+      <svg class="donut-chart-svg" viewBox="0 0 140 140">
+        <circle cx="70" cy="70" r="60" fill="transparent" stroke="#E2E8F0" stroke-width="14"/>
+        <circle id="donut-circle-progress" cx="70" cy="70" r="60" fill="transparent" stroke="#1591DC" stroke-width="14" stroke-dasharray="376.99" stroke-dashoffset="56.5" stroke-linecap="round" style="transition: stroke-dashoffset 0.5s ease;"/>
+      </svg>
+      <div class="donut-center-text">
+        <span class="donut-percent" id="donut-percent-text">85%</span>
+        <span class="donut-label">Penggunaan Optimal</span>
+      </div>
+    </div>
+
+    <div class="chart-legend">
+      <div class="legend-item">
+        <div class="legend-dot blue"></div>
+        <span>Dikonsumsi <b id="legend-consumed-count" style="margin-left: 4px;">17</b></span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot red"></div>
+        <span>Dibuang <b id="legend-wasted-count" style="margin-left: 4px;">3</b></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Estimasi Hemat Card -->
+  <div class="savings-banner">
+    <div class="savings-piggy-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+    </div>
+    <div>
+      <div class="savings-amount" id="analytics-savings-amount">Rp 45.000</div>
+      <div class="savings-label">Estimasi Hemat</div>
+    </div>
+  </div>
+
+  <!-- Kategori Terbanyak Terbuang Card -->
+  <div class="category-waste-card">
+    <div class="category-waste-header">
+      <span class="category-waste-title">Kategori Terbanyak Terbuang</span>
+    </div>
+    <div class="waste-bar-row">
+      <div class="waste-icon-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M2.5 16.5l8-8M12 4l-4 4M14 6l6-2-2 6-4 4"/></svg>
+      </div>
+      <div class="waste-info">
+        <div class="waste-cat-name" id="analytics-top-cat-name">Sayuran</div>
+        <div class="waste-cat-pct" id="analytics-top-cat-pct">(40%)</div>
+      </div>
+      <div class="mini-bar-chart">
+        <div class="mini-bar" style="height: 12px;"></div>
+        <div class="mini-bar highlight" style="height: 32px;"></div>
+        <div class="mini-bar" style="height: 18px;"></div>
+        <div class="mini-bar" style="height: 8px;"></div>
+        <div class="mini-bar" style="height: 22px;"></div>
+        <div class="mini-bar" style="height: 14px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Motivasi Banner -->
+  <div class="motivation-banner">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2Z"/><path d="m9 12 2 2 4-4"/></svg>
+    <span>Bagus! Kamu berhasil mengurangi pemborosan makanan.</span>
+  </div>
+</div>

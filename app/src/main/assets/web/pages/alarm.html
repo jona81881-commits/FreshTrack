@@ -1,0 +1,52 @@
+<!-- FreshTrack: Halaman Pengingat dan Alarm -->
+<div class="header-bar">
+  <span class="header-title">Pengingat dan Alarm</span>
+  <div class="header-action-btn" onclick="Navigation.navigate('tambah-makanan')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+  </div>
+</div>
+
+<div class="alarm-container">
+  <!-- Upcoming Alarm Card -->
+  <div class="alarm-next-card">
+    <div class="alarm-next-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    </div>
+    <div id="alarm-next-banner-content"></div>
+  </div>
+
+  <!-- Segmented Tabs -->
+  <div class="segmented-tabs">
+    <div class="segment-tab active" data-tab="aktif" id="tab-alarm-aktif" onclick="AlarmPage.setTab('aktif')">Aktif (2)</div>
+    <div class="segment-tab" data-tab="selesai" id="tab-alarm-selesai" onclick="AlarmPage.setTab('selesai')">Selesai (1)</div>
+  </div>
+
+  <!-- Alarm List Items -->
+  <div id="alarm-list-container"></div>
+
+  <!-- Pengaturan Pengingat Card -->
+  <div class="reminder-rule-card">
+    <div class="rule-title">Pengaturan Pengingat</div>
+    <label class="rule-option-item">
+      <input type="radio" name="reminder_preset" value="H-7">
+      <span>H-7 sebelum kedaluwarsa</span>
+    </label>
+    <label class="rule-option-item">
+      <input type="radio" name="reminder_preset" value="H-3" checked>
+      <span>H-3 sebelum kedaluwarsa</span>
+    </label>
+    <label class="rule-option-item">
+      <input type="radio" name="reminder_preset" value="H-1">
+      <span>H-1 sebelum kedaluwarsa</span>
+    </label>
+    <label class="rule-option-item">
+      <input type="radio" name="reminder_preset" value="Hari-H">
+      <span>Pada tanggal kedaluwarsa</span>
+    </label>
+    <label class="rule-option-item">
+      <input type="radio" name="reminder_preset" value="Khusus">
+      <span>Pengingat khusus</span>
+    </label>
+    <button class="btn btn-primary btn-block btn-pill" onclick="AlarmPage.saveReminderRules()" style="margin-top: 16px; padding: 12px;">Simpan Pengaturan</button>
+  </div>
+</div>

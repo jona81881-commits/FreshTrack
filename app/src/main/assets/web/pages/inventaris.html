@@ -1,0 +1,39 @@
+<!-- FreshTrack: Halaman Inventaris Makanan -->
+<div class="header-bar">
+  <span class="header-title">Inventaris Makanan</span>
+</div>
+
+<div class="inventory-container">
+  <!-- Search and Filter Row -->
+  <div class="search-filter-row">
+    <div class="search-input-wrapper">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" class="search-input" id="inventory-search-input" placeholder="Cari makanan...">
+    </div>
+    <div class="filter-icon-btn" onclick="Database.showToast('Gunakan kategori di bawah untuk menyaring makanan')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+    </div>
+  </div>
+
+  <!-- Horizontal Category Chips -->
+  <div class="chips-scroll-container" id="inventory-category-chips"></div>
+
+  <!-- Sort Selector Row -->
+  <div class="sort-selector-row">
+    <span style="font-size: 12px; color: var(--text-secondary);">Daftar Persediaan</span>
+    <select class="sort-select" id="inventory-sort-select">
+      <option value="Terdekat Kedaluwarsa">Urutkan: Terdekat Kedaluwarsa</option>
+      <option value="Terbaru Ditambahkan">Urutkan: Terbaru Ditambahkan</option>
+      <option value="Nama Makanan">Urutkan: Nama Makanan</option>
+      <option value="Prioritas Konsumsi">Urutkan: Prioritas Konsumsi</option>
+    </select>
+  </div>
+
+  <!-- Inventory List -->
+  <div id="inventory-list"></div>
+</div>
+
+<!-- Floating Action Button (FAB) -->
+<div class="fab-btn" onclick="Navigation.navigate('tambah-makanan')">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="24" height="24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+</div>

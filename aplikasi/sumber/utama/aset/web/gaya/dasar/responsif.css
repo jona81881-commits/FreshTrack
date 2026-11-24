@@ -1,0 +1,34 @@
+/* Responsive & Safe Area Adjustments */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .header-bar {
+    padding-top: max(16px, env(safe-area-inset-top));
+  }
+  .dashboard-header {
+    padding-top: max(24px, env(safe-area-inset-top));
+  }
+  .bottom-nav {
+    padding-bottom: env(safe-area-inset-bottom);
+    height: calc(64px + env(safe-area-inset-bottom));
+  }
+  .page-view {
+    padding-bottom: calc(74px + env(safe-area-inset-bottom));
+  }
+  .fab-btn {
+    bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+  .detail-action-bar {
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+  }
+}
+
+/* Screen bounds for tablet / desktop preview */
+@media (min-width: 481px) {
+  body {
+    background-color: #E2E8F0;
+    display: flex;
+    justify-content: center;
+  }
+  #app-root {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+}
